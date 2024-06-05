@@ -796,7 +796,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   // });
   // await depositHandle.wait();
 
-  const factory = await deployer.deploy(factoryArtifact, [utils.hashBytecode(aaArtifact.bytecode)], undefined, [aaArtifact.bytecode]);
+  const factory = await deployer.deploy(factoryArtifact, [utils.hashBytecode(aaArtifact.bytecode)], "create", undefined, [aaArtifact.bytecode]);
   const factoryAddress = await factory.getAddress();
   console.log(`AA factory address: ${factoryAddress}`);
 
